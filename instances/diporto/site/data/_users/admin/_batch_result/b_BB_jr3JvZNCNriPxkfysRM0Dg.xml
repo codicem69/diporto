@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GenRoBag><title>Stampa NC</title>
+<batch_id>BB_jr3JvZNCNriPxkfysRM0Dg</batch_id>
+<owner_page_id>GYnPXT4NNC6FjrJRvAwYjg</owner_page_id>
+<note _T="NN"></note>
+<start_ts _T="DH">2021-09-30T14:39:00.583450+02:00</start_ts>
+<end_ts _T="DH">2021-09-30T14:39:01.102732+02:00</end_ts>
+<time_delta>0:00:00</time_delta>
+<result url="/_user/admin/output/pdf/nota_di_consegna_nc21000001.pdf?download=True&amp;mtime=1633005541" document_name="nota_di_consegna_nc21000001" url_print='javascript:genro.openWindow("/_user/admin/output/pdf/nota_di_consegna_nc21000001.pdf?mtime=1633005541","nota_di_consegna_nc21000001");' autoDestroy="600::L"></result></GenRoBag>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GenRoBag><metadata><email><subject _T="NN"></subject>
+<to_address _T="NN"></to_address>
+<from_address _T="NN"></from_address>
+<cc_address _T="NN"></cc_address>
+<bcc_address _T="NN"></bcc_address>
+<attachments _T="NN"></attachments></email></metadata>
+<varsbag><g2nuyvfv1d _pkey="g2nuyvfv1d"><fieldpath>rag_sociale</fieldpath>
+<dtype dtype="::NN">T</dtype>
+<fieldname dtype="::NN">ragione sociale</fieldname>
+<varname dtype="::NN">ragione_sociale</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN"></required_columns>
+<df_template _T="NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></g2nuyvfv1d>
+<g2nuyx0ok9 _pkey="g2nuyx0ok9"><fieldpath>indirizzo</fieldpath>
+<dtype dtype="::NN">T</dtype>
+<fieldname dtype="::NN">indirizzo</fieldname>
+<varname dtype="::NN">indirizzo</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN"></required_columns>
+<df_template _T="NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></g2nuyx0ok9>
+<g2nuyy1iy9 _pkey="g2nuyy1iy9"><fieldpath>p_iva</fieldpath>
+<dtype dtype="::NN">T</dtype>
+<fieldname dtype="::NN">partita iva</fieldname>
+<varname dtype="::NN">partita_iva</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN"></required_columns>
+<df_template _T="NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></g2nuyy1iy9></varsbag>
+<email><attached_reports _T="BAG"></attached_reports></email>
+<content>&lt;div&gt;
+	&lt;strong&gt;Spett.le&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+	&lt;strong&gt;$ragione_sociale&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+	&lt;strong&gt;$indirizzo&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+	&lt;strong&gt;$partita_iva&lt;/strong&gt;&lt;/div&gt;
+</content>
+<compiled><main maintable="diporto.cliente" locale="it-IT" virtual_columns="" columns="$rag_sociale,$indirizzo,$p_iva" formats="{}::JS" masks="{}::JS" editcols="{}::JS" df_templates="{}::JS" dtypes='{"ragione_sociale": "T", "indirizzo": "T", "partita_iva": "T"}::JS'>&lt;html&gt;&lt;body&gt;&lt;div&gt;
+	&lt;strong&gt;Spett.le&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+	&lt;strong&gt;$rag_sociale&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+	&lt;strong&gt;$indirizzo&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+	&lt;strong&gt;$p_iva&lt;/strong&gt;&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</main></compiled></GenRoBag>

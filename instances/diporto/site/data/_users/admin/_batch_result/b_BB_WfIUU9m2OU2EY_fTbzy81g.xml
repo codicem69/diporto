@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GenRoBag><title>Stampa Report</title>
+<batch_id>BB_WfIUU9m2OU2EY_fTbzy81g</batch_id>
+<owner_page_id>tTpz3erZPYWwTv5cTVkKuw</owner_page_id>
+<note _T="NN"></note>
+<start_ts _T="DH">2021-09-30T09:13:11.871169+02:00</start_ts>
+<end_ts _T="DH">2021-09-30T09:13:12.304473+02:00</end_ts>
+<time_delta>0:00:00</time_delta>
+<result url="/_user/admin/output/pdf/report_c4j5umd3o9iftyiqmrthbq.pdf?download=True&amp;mtime=1632985992" document_name="report_c4j5umd3o9iftyiqmrthbq" url_print='javascript:genro.openWindow("/_user/admin/output/pdf/report_c4j5umd3o9iftyiqmrthbq.pdf?mtime=1632985992","report_c4j5umd3o9iftyiqmrthbq");' autoDestroy="600::L"></result></GenRoBag>
