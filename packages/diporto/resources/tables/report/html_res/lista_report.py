@@ -16,7 +16,7 @@ class Main(TableScriptToHtml):
     doc_header_height = 30
     doc_footer_height = 8
     grid_header_height = 10
-    totalize_footer='Totale incassato'
+    totalize_footer='Totali'
     #Fornendo a totalize_footer una stringa testuale, questa verrà usata come etichetta della riga di totalizzazione
     empty_row=dict()
     #Grazie a questo parametro in caso di mancanza di dati verrà stampata una griglia vuota invece di una pagina bianca
