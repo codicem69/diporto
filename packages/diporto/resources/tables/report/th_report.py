@@ -15,8 +15,8 @@ class View(BaseComponent):
         r.fieldcell('pos_esterno')
         r.fieldcell('pos_manuale')
         r.fieldcell('somme_np')
-
-        r.fieldcell('tot_incasso')
+        r.fieldcell('venduto_gas')
+        r.fieldcell('venduto_benz')
         r.fieldcell('rim_gasolio',background='#e7f6f7')
         r.fieldcell('rim_benzina',background='#defade')
 
@@ -47,6 +47,9 @@ class Form(BaseComponent):
         fb.br()
         fb.field('rim_gasolio',width='7em',readOnly=True)
         fb.field('rim_benzina',width='7em',readOnly=True)
+        fb.br()
+        fb.field('venduto_gas',width='7em',readOnly=True)
+        fb.field('venduto_benz',width='7em',readOnly=True)
         centro = bc.roundedGroup(title='Dati Incassi',region='center', width='100%').div(margin='10px',margin_left='2px')
         fb = centro.formbuilder(cols=2, border_spacing='4px')
         
@@ -68,7 +71,7 @@ class Form(BaseComponent):
                        posman='^.pos_manuale', sommenp='^.somme_np')
         fb.field('tot_gasolio', wdth='7em')
         fb.field('tot_benzina', wdth='7em')
-        
+
     def reportDett(self,pane):
         pane.inlineTableHandler(relation='@report_totaliz',viewResource='ViewFromTotalizzatori',
                             picker='report_id')   

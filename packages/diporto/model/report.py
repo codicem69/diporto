@@ -21,6 +21,8 @@ class Table(object):
         tbl.column('tot_benzina',dtype='N',size='10,2',name_long='Totale Benzina',name_short='tot incasso',format='#,###.00')
         tbl.column('rim_gasolio',dtype='N',size='10,2',name_long='Rimanenza Gasolio',name_short='rim gasolio',format='#,###.00')
         tbl.column('rim_benzina',dtype='N',size='10,2',name_long='Rimanenza Benzina',name_short='rim benzina',format='#,###.00')
+        tbl.column('venduto_gas',dtype='N',size='10,2',name_long='Gasolio vend. Lt',name_short='Gas.vend Lt',format='#,###.00')
+        tbl.column('venduto_benz',dtype='N',size='10,2',name_long='Benzina vend. Lt',name_short='Benz.vend. Lt',format='#,###.00')
         tbl.formulaColumn('anno_report',"date_part('year', $data)", dtype='D')
         tbl.formulaColumn('mese_report', """EXTRACT(MONTH FROM $data) || '-' || EXTRACT(YEAR FROM $data)""")
 
@@ -28,10 +30,12 @@ class Table(object):
         with self.recordToUpdate(report_id) as record:
             gasolio_venduto = self.db.table('diporto.totalizzatori').readColumns(columns="""SUM($gas1_vend + $gas2_vend)""",
                                                                     where='$id IS NOT NULL')
-
+            gasolio_vend = self.db.table('diporto.totalizzatori').readColumns(columns="""SUM($gas1_vend + $gas2_vend)""",
+                                                                    where='$report_id=:r_id', r_id=report_id)
             benzina_venduto = self.db.table('diporto.totalizzatori').readColumns(columns="""SUM($benz_vend)""",
                                                                      where='$id IS NOT NULL')
-
+            benzina_vend = self.db.table('diporto.totalizzatori').readColumns(columns="""SUM($benz_vend)""",
+                                                                     where='$report_id=:r_id',r_id=report_id)
             carico_gasolio = self.db.table('diporto.carico').readColumns(columns="""SUM($litri_gasolio) AS tot_carico_gas""",
                                                             where='$id=$id AND $data_car <= :data_car', 
                                                             data_car=self.db.table('diporto.totalizzatori').readColumns(columns='@report_id.data',
@@ -49,6 +53,7 @@ class Table(object):
 
             else:    
                 record['rim_gasolio'] = floatToDecimal(carico_gasolio - gasolio_venduto)
+                record['venduto_gas'] = floatToDecimal(gasolio_vend)
 
             if benzina_venduto is None:
                 record['rim_benzina'] = None
@@ -56,5 +61,5 @@ class Table(object):
                 record['rim_benzina'] = None   
             else:    
                 record['rim_benzina'] = floatToDecimal(carico_benzina - benzina_venduto)
-
+                record['venduto_benz'] = floatToDecimal(benzina_vend)
             

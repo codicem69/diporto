@@ -15,7 +15,7 @@ class Main(TableScriptToHtml):
     page_height = 297
     doc_header_height = 30
     doc_footer_height = 8
-    grid_header_height = 5
+    grid_header_height = 10
     totalize_footer='Totale incassato'
     #Fornendo a totalize_footer una stringa testuale, questa verrà usata come etichetta della riga di totalizzazione
     empty_row=dict()
@@ -51,16 +51,20 @@ class Main(TableScriptToHtml):
     def gridStruct(self,struct):
         #Questo metodo definisce la struttura della griglia di stampa definendone colonne e layout
         r = struct.view().rows()
-        r.fieldcell('data', mm_width=15)
-        r.fieldcell('mese_report', hidden=True, subtotal='Totale mese {breaker_value}', subtotal_order_by="$data")
+        r.fieldcell('data', mm_width=12)
         #Questa formulaColumn verrà utilizzata per creare i subtotali per mese
-        r.fieldcell('prezzo_gas', mm_width=0, name='Prezzo Gas')
-        r.fieldcell('prezzo_benz', mm_width=0)
+        r.fieldcell('prezzo_gas', mm_width=9, name='Prezzo Gas')
+        r.fieldcell('prezzo_benz', mm_width=9, name='Prezzo Benz')
         r.fieldcell('contanti', mm_width=0)
         r.fieldcell('pos_esterno', mm_width=0)
         r.fieldcell('pos_manuale', mm_width=0)
         r.fieldcell('somme_np', mm_width=0)
-        r.fieldcell('tot_incasso', mm_width=20, totalize=True)
+        r.fieldcell('mese_report',  subtotal='Totale mese {breaker_value}', subtotal_order_by="$data", mm_width=0,hidden=True)
+        r.fieldcell('tot_incasso', mm_width=0, totalize=True)
+
+
+        r.fieldcell('venduto_gas', mm_width=12, totalize=True)
+        r.fieldcell('venduto_benz', mm_width=12, totalize=True)
 
     def gridQueryParameters(self):
         #Questo metodo fornisce a gridData i parametri (condizioni, relation, table) sulla base dei quali costruire
