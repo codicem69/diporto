@@ -22,7 +22,8 @@ class Table(object):
         tbl.column('rim_gasolio',dtype='N',size='10,2',name_long='Rimanenza Gasolio',name_short='rim gasolio',format='#,###.00')
         tbl.column('rim_benzina',dtype='N',size='10,2',name_long='Rimanenza Benzina',name_short='rim benzina',format='#,###.00')
         tbl.formulaColumn('anno_report',"date_part('year', $data)", dtype='D')
-        
+        tbl.formulaColumn('mese_report', """EXTRACT(MONTH FROM $data) || '-' || EXTRACT(YEAR FROM $data)""")
+
     def ricalcolaRimanenze(self,report_id=None):
         with self.recordToUpdate(report_id) as record:
             gasolio_venduto = self.db.table('diporto.totalizzatori').readColumns(columns="""SUM($gas1_vend + $gas2_vend)""",

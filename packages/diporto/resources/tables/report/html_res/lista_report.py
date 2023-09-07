@@ -52,7 +52,7 @@ class Main(TableScriptToHtml):
         #Questo metodo definisce la struttura della griglia di stampa definendone colonne e layout
         r = struct.view().rows()
         r.fieldcell('data', mm_width=15)
-        #r.fieldcell('mese_report', hidden=True, subtotal='Totale {breaker_value}', subtotal_order_by="$data")
+        r.fieldcell('mese_report', hidden=True, subtotal='Totale mese {breaker_value}', subtotal_order_by="$data")
         #Questa formulaColumn verrà utilizzata per creare i subtotali per mese
         r.fieldcell('prezzo_gas', mm_width=0, name='Prezzo Gas')
         r.fieldcell('prezzo_benz', mm_width=0)
