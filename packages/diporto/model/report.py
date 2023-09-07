@@ -5,12 +5,20 @@ class Table(object):
     def config_db(self,pkg):
         tbl =  pkg.table('report',pkey='id',name_long='report',name_plural='report',caption_field='id')
         self.sysFields(tbl)
-        tbl.column('data',dtype='D',name_long='data report',name_short='data_r')
-        tbl.column('prezzo_gas',dtype='N',size='10,3',name_long='prezzo gasolio',name_short='prezzo_gas',format='#,###.000')
-        tbl.column('prezzo_benz',dtype='N',size='10,3',name_long='prezzo benzina',name_short='prezzo_benz',format='#,###.000')
-        tbl.column('tot_incasso',dtype='N',size='10,2',name_long='totale incasso',name_short='tot_incasso',format='#,###.00')
-        tbl.column('rim_gasolio',dtype='N',size='10,2',name_long='rimanenza gasolio',name_short='rim_gasolio',format='#,###.00')
-        tbl.column('rim_benzina',dtype='N',size='10,2',name_long='rimanenza benzina',name_short='rim_benzina',format='#,###.00')
+        tbl.column('data',dtype='D',name_long='Data Report',name_short='data')
+        tbl.column('prezzo_gas',dtype='N',size='10,3',name_long='Prezzo Gasolio',name_short='prezzo gas',format='#,###.000')
+        tbl.column('prezzo_benz',dtype='N',size='10,3',name_long='Prezzo Benzina',name_short='prezzo benz',format='#,###.000')
+        tbl.column('contanti',dtype='N',size='10,2',name_short='Contanti',format='#,###.00')
+        tbl.column('note_contanti', name_short='Note contanti')
+        tbl.column('pos_esterno',dtype='N',size='10,2',name_short='Pos esterno',format='#,###.00')
+        tbl.column('note_posest', name_short='Note pos esterno')
+        tbl.column('pos_manuale',dtype='N',size='10,2',name_short='Pos manuale',format='#,###.00')
+        tbl.column('note_posman', name_short='Note pos manuale')
+        tbl.column('somme_np',dtype='N',size='10,2',name_short='Somme non pagate',format='#,###.00')
+        tbl.column('note_snp', name_short='Note Somme np')
+        tbl.column('tot_incasso',dtype='N',size='10,2',name_long='Totale Incasso',name_short='tot incasso',format='#,###.00')
+        tbl.column('rim_gasolio',dtype='N',size='10,2',name_long='Rimanenza Gasolio',name_short='rim gasolio',format='#,###.00')
+        tbl.column('rim_benzina',dtype='N',size='10,2',name_long='Rimanenza Benzina',name_short='rim benzina',format='#,###.00')
 
     def ricalcolaRimanenze(self,report_id=None):
         with self.recordToUpdate(report_id) as record:
