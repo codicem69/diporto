@@ -17,6 +17,8 @@ class Table(object):
         tbl.column('somme_np',dtype='N',size='10,2',name_short='Somme non pagate',format='#,###.00')
         tbl.column('note_snp', name_short='Note Somme np')
         tbl.column('tot_incasso',dtype='N',size='10,2',name_long='Totale Incasso',name_short='tot incasso',format='#,###.00')
+        tbl.column('tot_gasolio',dtype='N',size='10,2',name_long='Totale Gasolio',name_short='tot incasso',format='#,###.00')
+        tbl.column('tot_benzina',dtype='N',size='10,2',name_long='Totale Benzina',name_short='tot incasso',format='#,###.00')
         tbl.column('rim_gasolio',dtype='N',size='10,2',name_long='Rimanenza Gasolio',name_short='rim gasolio',format='#,###.00')
         tbl.column('rim_benzina',dtype='N',size='10,2',name_long='Rimanenza Benzina',name_short='rim benzina',format='#,###.00')
 

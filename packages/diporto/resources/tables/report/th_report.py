@@ -66,7 +66,9 @@ class Form(BaseComponent):
         fb.br() 
         fb.dataFormula('^.tot_incasso','contanti+posest+posman+sommenp', contanti='^.contanti', posest='^.pos_esterno', 
                        posman='^.pos_manuale', sommenp='^.somme_np')
-
+        fb.field('tot_gasolio', wdth='7em')
+        fb.field('tot_benzina', wdth='7em')
+        
     def reportDett(self,pane):
         pane.inlineTableHandler(relation='@report_totaliz',viewResource='ViewFromTotalizzatori',
                             picker='report_id')   

@@ -74,6 +74,8 @@ class Main(TableScriptToHtml):
         r.cell(self.field('note_snp'),lbl='Note somme non pagate',content_class='aligned_center',lbl_height=5)
         r = l.row(height=12, font_weight='bold')
         r.cell(self.field('tot_incasso'), lbl='Totale Incasso',content_class='aligned_center',lbl_height=5)
+        r.cell(self.field('tot_gasolio'), lbl='Totale Gasolio',content_class='aligned_center',lbl_height=5)
+        r.cell(self.field('tot_benzina'), lbl='Totale Benzina',content_class='aligned_center',lbl_height=5)
         r = l.row(height=12)
      
        
