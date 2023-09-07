@@ -3,7 +3,7 @@ from gnr.core.gnrnumber import floatToDecimal,decimalRound
 
 class Table(object):
     def config_db(self,pkg):
-        tbl =  pkg.table('report',pkey='id',name_long='report',name_plural='report',caption_field='id')
+        tbl =  pkg.table('report',pkey='id',name_long='report',name_plural='report',caption_field='data')
         self.sysFields(tbl)
         tbl.column('data',dtype='D',name_long='Data Report',name_short='data')
         tbl.column('prezzo_gas',dtype='N',size='10,3',name_long='Prezzo Gasolio',name_short='prezzo gas',format='#,###.000')
@@ -21,7 +21,8 @@ class Table(object):
         tbl.column('tot_benzina',dtype='N',size='10,2',name_long='Totale Benzina',name_short='tot incasso',format='#,###.00')
         tbl.column('rim_gasolio',dtype='N',size='10,2',name_long='Rimanenza Gasolio',name_short='rim gasolio',format='#,###.00')
         tbl.column('rim_benzina',dtype='N',size='10,2',name_long='Rimanenza Benzina',name_short='rim benzina',format='#,###.00')
-
+        tbl.formulaColumn('anno_report',"date_part('year', $data)", dtype='D')
+        
     def ricalcolaRimanenze(self,report_id=None):
         with self.recordToUpdate(report_id) as record:
             gasolio_venduto = self.db.table('diporto.totalizzatori').readColumns(columns="""SUM($gas1_vend + $gas2_vend)""",
