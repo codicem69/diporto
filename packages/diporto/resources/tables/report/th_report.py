@@ -73,8 +73,7 @@ class Form(BaseComponent):
         fb.field('tot_benzina', wdth='7em')
 
     def reportDett(self,pane):
-        pane.inlineTableHandler(relation='@report_totaliz',viewResource='ViewFromTotalizzatori',
-                            picker='report_id')   
+        pane.inlineTableHandler(relation='@report_totaliz',viewResource='ViewFromTotalizzatori')
                            
    #    pane = form.record
    #    fb = pane.formbuilder(cols=2, border_spacing='4px')
