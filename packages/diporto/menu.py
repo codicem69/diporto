@@ -11,6 +11,8 @@ class Menu(object):
         diporto.thpage(u"cliente", table="diporto.cliente", tags="")
         diporto.thpage(u"dett_nc", table="diporto.dett_nc", tags="")
         diporto.thpage(u"totalizzatori", table="diporto.totalizzatori", tags="")
+        diporto.thpage(u"etichette", table="diporto.etichetta", tags="")
+        diporto.thpage(u"logo", table="diporto.logo", tags="")
         diporto.lookups(u"Lookup tables", lookup_manager="diporto")
 
 

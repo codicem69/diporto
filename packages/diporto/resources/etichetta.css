@@ -1,0 +1,12 @@
+img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.celldata{padding-left:1px;
+    padding-top:8px;
+    text-align:center;
+}

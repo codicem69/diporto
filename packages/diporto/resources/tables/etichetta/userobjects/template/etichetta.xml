@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GenRoBag><_ins_ts _tag="__ins_ts" _T="DH" dtype="DH" name_long="!![en]Insert date" indexed="True::B" group="zzz" onInserting="setTSNow" _sysfield="True::B" as="t0___ins_ts">2024-09-20T16:12:07.612231+02:00</_ins_ts>
+<_del_ts _tag="__del_ts" _T="NN" dtype="DH" name_long="!![en]Logical delete date" indexed="True::B" group="zzz" _sysfield="True::B" as="t0___del_ts"></_del_ts>
+<_mod_ts _tag="__mod_ts" _T="DH" dtype="DH" name_long="!![en]Update date" indexed="True::B" group="zzz" onInserting="setTSNow" onUpdating="setTSNow" _sysfield="True::B" print_width="26::L" as="t0___mod_ts">2024-09-23T17:14:28.082919+02:00</_mod_ts>
+<_ins_user _tag="__ins_user" name_long="!![en]User Insert" group="zzz" onInserting="setCurrentUser" _sysfield="True::B" dtype="T" as="t0___ins_user">admin</_ins_user>
+<identifier size=":120" unique="True::B" indexed="True::B" sql_value="COALESCE(:tbl,:pkg,'')||:objtype||:code|| CASE WHEN :private THEN :userid ELSE '' END" dtype="A" as="t0_identifier">diporto.etichettatemplateetichetta</identifier>
+<code size=":40" name_long="!![en]Code" indexed="y" dtype="A" print_width="30::L" as="t0_code">etichetta</code>
+<objtype size=":20" name_long="!![en]Object Type" indexed="y" dtype="A" print_width="15::L" as="t0_objtype">template</objtype>
+<pkg size=":50" name_long="!![en]Package" dtype="A" print_width="30::L" as="t0_pkg">diporto</pkg>
+<tbl size=":50" name_long="!![en]Table" dtype="A" print_width="30::L" as="t0_tbl">diporto.etichetta</tbl>
+<userid size=":50" name_long="!![en]User ID" indexed="y" dtype="A" print_width="30::L" as="t0_userid">admin</userid>
+<description size=":50" name_long="!![en]Description" indexed="y" dtype="A" print_width="30::L" as="t0_description">Etichetta</description>
+<notes _T="NN" dtype="T" name_long="!![en]Notes" as="t0_notes"></notes>
+<data dtype="X" name_long="!![en]Data" print_width="12::L" as="t0_data"><content>&lt;div&gt;
+	&lt;table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;margin-left:auto;margin-right:auto;margin-top:20px;width:270px;"&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td colspan="2" style="text-align: center;"&gt;
+					&lt;div class='container'&gt;
+						$logo&lt;/div&gt;
+					&lt;div&gt;
+						&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;&lt;span style="font-size:10px;"&gt;PORTO DI ORTONA&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;IMBARCAZIONE&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$imbarcazione_nome&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;PRODOTTO&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$prodotto&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Densit&amp;agrave; ambiente&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$dens_amb&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Densit&amp;agrave; 15&amp;deg;&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$dens_15&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Memorandum d&amp;#39;Imbarco n.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$mem_n&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Data rifornimento&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$data&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Sigillo Campione n.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$sigillo&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&amp;nbsp;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&amp;nbsp;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td colspan="2"&gt;
+					&lt;div&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Ditta Ranalli Giuseppe S.r.l.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						__________________________&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+	&lt;div&gt;
+		&amp;nbsp;&lt;/div&gt;
+	&lt;div&gt;
+		&amp;nbsp;&lt;/div&gt;
+	&lt;div&gt;
+		&lt;div&gt;
+			&lt;div&gt;
+				&lt;div&gt;
+					&amp;nbsp;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div&gt;
+		&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;
+	&lt;table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;margin-left:auto;margin-right:auto;margin-top:20px;width:270px;"&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td colspan="2" style="text-align: center;"&gt;
+					&lt;div class='container'&gt;
+						$logo&lt;/div&gt;
+					&lt;div&gt;
+						&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;&lt;span style="font-size:10px;"&gt;PORTO DI ORTONA&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;IMBARCAZIONE&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$imbarcazione_nome&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;PRODOTTO&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$prodotto&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Densit&amp;agrave; ambiente&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$dens_amb&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Densit&amp;agrave; 15&amp;deg;&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$dens_15&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Memorandum d&amp;#39;Imbarco n.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$mem_n&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Data rifornimento&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$data&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Sigillo Campione n.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$sigillo&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td colspan="2"&gt;
+					&lt;div&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;IL COMANDANTE&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						__________________________&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+	&lt;div&gt;
+		&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;</content>
+<metadata><author>admin</author>
+<version _T="NN"></version>
+<date _T="NN"></date>
+<is_print _T="B">True</is_print>
+<is_mail _T="NN"></is_mail>
+<is_row _T="NN"></is_row>
+<row_height _T="NN"></row_height>
+<default_letterhead _T="NN"></default_letterhead>
+<summary _T="NN"></summary>
+<email><subject _T="NN"></subject>
+<to_address _T="NN"></to_address>
+<from_address _T="NN"></from_address>
+<cc_address _T="NN"></cc_address>
+<bcc_address _T="NN"></bcc_address>
+<attachments _T="NN"></attachments></email>
+<email_compiled _T="BAG"></email_compiled></metadata>
+<varsbag><h043rcxtw9 _pkey="h043rcxtw9"><fieldpath dtype="::NN">@imbarcazione_id.nome</fieldpath>
+<dtype dtype="::NN">T</dtype>
+<fieldname dtype="::NN">Imbarcazione/nome</fieldname>
+<varname dtype="::NN">imbarcazione_nome</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN" dtype="::NN"></required_columns>
+<df_template _T="NN" dtype="::NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></h043rcxtw9>
+<h043roermx _pkey="h043roermx"><fieldpath dtype="::NN">@prodotto_id.prodotto</fieldpath>
+<dtype dtype="::NN">T</dtype>
+<fieldname dtype="::NN">Prodotto/prodotto</fieldname>
+<varname dtype="::NN" _loadedValue="prodotto_prodotto">prodotto</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN" dtype="::NN"></required_columns>
+<df_template _T="NN" dtype="::NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></h043roermx>
+<h043rzz0z5 _pkey="h043rzz0z5"><fieldpath dtype="::NN">sigillo</fieldpath>
+<dtype dtype="::NN">T</dtype>
+<fieldname dtype="::NN">sigillo</fieldname>
+<varname dtype="::NN">sigillo</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN" dtype="::NN"></required_columns>
+<df_template _T="NN" dtype="::NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></h043rzz0z5>
+<h043rz12r5 _pkey="h043rz12r5"><fieldpath dtype="::NN">data</fieldpath>
+<dtype dtype="::NN">D</dtype>
+<fieldname dtype="::NN">data</fieldname>
+<varname dtype="::NN">data</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN" dtype="::NN"></required_columns>
+<df_template _T="NN" dtype="::NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></h043rz12r5>
+<h043ry4y49 _pkey="h043ry4y49"><fieldpath dtype="::NN">mem_n</fieldpath>
+<dtype dtype="::NN">T</dtype>
+<fieldname dtype="::NN">mem_n</fieldname>
+<varname dtype="::NN">mem_n</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN" dtype="::NN"></required_columns>
+<df_template _T="NN" dtype="::NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></h043ry4y49>
+<h043rxaift _pkey="h043rxaift"><fieldpath dtype="::NN">dens_15</fieldpath>
+<dtype dtype="::NN">N</dtype>
+<fieldname dtype="::NN">dens_15</fieldname>
+<varname dtype="::NN">dens_15</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN" dtype="::NN"></required_columns>
+<df_template _T="NN" dtype="::NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></h043rxaift>
+<h043rvvvwp _pkey="h043rvvvwp"><fieldpath dtype="::NN">dens_amb</fieldpath>
+<dtype dtype="::NN">N</dtype>
+<fieldname dtype="::NN">dens_amb</fieldname>
+<varname dtype="::NN">dens_amb</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN" dtype="::NN"></required_columns>
+<df_template _T="NN" dtype="::NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></h043rvvvwp>
+<h044v92olt _pkey="h044v92olt"><fieldpath dtype="::NN">logo</fieldpath>
+<dtype dtype="::NN">P</dtype>
+<fieldname dtype="::NN">logo</fieldname>
+<varname dtype="::NN">logo</varname>
+<virtual_column _T="B">True</virtual_column>
+<required_columns _T="NN" dtype="::NN"></required_columns>
+<df_template _T="NN" dtype="::NN"></df_template>
+<format dtype="::NN">auto</format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable dtype="::NN" _loadedValue="::NN">height="50"</editable></h044v92olt></varsbag>
+<parameters _T="BAG"></parameters>
+<email><attached_reports _T="BAG"></attached_reports></email>
+<content_css>.container img {
+  height: 100%;
+  width: 100%;
+}</content_css>
+<compiled><main maintable="diporto.etichetta" locale="it-IT" virtual_columns="logo" columns="@imbarcazione_id.nome,@prodotto_id.prodotto,$sigillo,$data,$mem_n,$dens_15,$dens_amb,$logo" formats='{"logo": "auto"}::JS' masks="{}::JS" editcols='{"logo": "height=\"50\""}::JS' df_templates="{}::JS" dtypes='{"imbarcazione_nome": "T", "prodotto": "T", "sigillo": "T", "data": "D", "mem_n": "T", "dens_15": "N", "dens_amb": "N", "logo": "P"}::JS'>&lt;style&gt;.container img {
+  height: 100%;
+  width: 100%;
+}&lt;/style&gt;&lt;div&gt;
+	&lt;table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;margin-left:auto;margin-right:auto;margin-top:20px;width:270px;"&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td colspan="2" style="text-align: center;"&gt;
+					&lt;div class='container'&gt;
+						$logo^logo&lt;/div&gt;
+					&lt;div&gt;
+						&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;&lt;span style="font-size:10px;"&gt;PORTO DI ORTONA&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;IMBARCAZIONE&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$@imbarcazione_id.nome&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;PRODOTTO&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$@prodotto_id.prodotto&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Densit&amp;agrave; ambiente&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$dens_amb&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Densit&amp;agrave; 15&amp;deg;&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$dens_15&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Memorandum d&amp;#39;Imbarco n.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$mem_n&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Data rifornimento&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$data&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Sigillo Campione n.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$sigillo&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&amp;nbsp;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&amp;nbsp;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td colspan="2"&gt;
+					&lt;div&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Ditta Ranalli Giuseppe S.r.l.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						__________________________&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+	&lt;div&gt;
+		&amp;nbsp;&lt;/div&gt;
+	&lt;div&gt;
+		&amp;nbsp;&lt;/div&gt;
+	&lt;div&gt;
+		&lt;div&gt;
+			&lt;div&gt;
+				&lt;div&gt;
+					&amp;nbsp;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div&gt;
+		&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;
+	&lt;table border="1" cellpadding="1" cellspacing="1" style="border-collapse:collapse;margin-left:auto;margin-right:auto;margin-top:20px;width:270px;"&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td colspan="2" style="text-align: center;"&gt;
+					&lt;div class='container'&gt;
+						$logo^logo&lt;/div&gt;
+					&lt;div&gt;
+						&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;&lt;span style="font-size:10px;"&gt;PORTO DI ORTONA&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;IMBARCAZIONE&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$@imbarcazione_id.nome&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;PRODOTTO&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$@prodotto_id.prodotto&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Densit&amp;agrave; ambiente&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$dens_amb&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Densit&amp;agrave; 15&amp;deg;&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$dens_15&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Memorandum d&amp;#39;Imbarco n.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$mem_n&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Data rifornimento&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$data&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;Sigillo Campione n.&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td style="text-align: center;"&gt;
+					&lt;span style="font-size:10px;"&gt;&lt;strong&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;$sigillo&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td colspan="2"&gt;
+					&lt;div&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&lt;span style="font-size:10px;"&gt;&lt;span style="font-family:arial,helvetica,sans-serif;"&gt;IL COMANDANTE&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						&amp;nbsp;&lt;/div&gt;
+					&lt;div style="text-align: center;"&gt;
+						__________________________&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+	&lt;div&gt;
+		&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;</main></compiled></data>
+<authtags _T="NN" dtype="T" name_long="!![en]Auth tags" print_width="20::L" as="t0_authtags"></authtags>
+<private _T="B" dtype="B" name_long="!![en]Private" print_width="11::L" as="t0_private">False</private>
+<quicklist _T="NN" dtype="B" name_long="!![en]Quicklist" print_width="13::L" as="t0_quicklist"></quicklist>
+<flags dtype="T" name_long="!![en]Flags" print_width="20::L" as="t0_flags">is_print</flags>
+<required_pkg _T="NN" name_long="!![en]Required pkg" dtype="T" print_width="20::L" as="t0_required_pkg"></required_pkg>
+<preview _T="NN" name_long="!![en][it]Preview" dtype="T" as="t0_preview"></preview></GenRoBag>
