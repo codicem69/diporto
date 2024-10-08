@@ -8,8 +8,8 @@ class Table(object):
                    ).relation('acc_mp.imbarcazione.id', mode='foreignkey', onDelete='raise', one_one='*')
         tbl.column('prodotto_id',size='22', name_long='!![it]Prodotto'
                     ).relation('prodotti.id', relation_name='prod', mode='foreignkey', onDelete='raise')
-        tbl.column('dens_amb', dtype='N', name_short='!![it]Densità ambiente')
-        tbl.column('dens_15', dtype='N', name_short='!![it]Densità 15°')
+        tbl.column('dens_amb', dtype='N', name_short='!![it]Densità ambiente',format='#,###.000')
+        tbl.column('dens_15', dtype='N', name_short='!![it]Densità 15°',format='#,###.000')
         tbl.column('mem_n', name_short='!![it]Memorandum n.')
         tbl.column('data', dtype='D', name_short='!![it]Data')
         tbl.column('sigillo', name_short='!![it]Sigillo n.')

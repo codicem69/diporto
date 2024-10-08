@@ -33,8 +33,8 @@ class Form(BaseComponent):
         fb = pane.formbuilder(cols=2, border_spacing='4px')
         fb.field('imbarcazione_id', hasDownArrow=True )
         fb.field('prodotto_id' )
-        fb.field('dens_amb' )
-        fb.field('dens_15' )
+        fb.field('dens_amb',format='#,###.000' )
+        fb.field('dens_15' ,format='#,###.000')
         fb.field('mem_n' )
         fb.field('data' )
         fb.field('sigillo' )
@@ -81,4 +81,5 @@ class Form(BaseComponent):
   
 
     def th_options(self):
-        return dict(dialog_height='400px', dialog_width='600px' )
+        return dict(dialog_windowRatio = 1)
+        #return dict(dialog_height='400px', dialog_width='600px' )
