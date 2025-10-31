@@ -1,7 +1,7 @@
 from turtle import width
 from gnr.web.gnrbaseclasses import TableScriptToHtml
-import datetime
-
+#import datetime
+from datetime import datetime
 
 class Main(TableScriptToHtml):
     maintable = 'diporto.etichetta'
